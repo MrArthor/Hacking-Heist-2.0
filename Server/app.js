@@ -14,7 +14,7 @@ const app = express();
 
 const User = require("./models/userModel");
 const Question = require("./models/QuestionModel");
-const Answer = require("./models/AnswerModel");
+const Answers = require("./models/AnswerModel");
 const Categories = require("./models/CategoriesModel");
 
 const bodyParser = require('body-parser');
@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-mongoose.connect("mongodb://localhost:27017/", {
+mongoose.connect("mongodb://localhost:27017/Ansed", {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
@@ -73,26 +73,31 @@ app.use((req, res, next) => {
     res.locals.success = req.flash('success');
     res.locals.Error = req.flash('error');
     res.locals.CurrentUser = req.user;
-
     next();
 })
 
-app.get("/Categoires", async(req, res) => {
+app.get("/Categories", async(req, res) => {
     const Category = await Categories.find({});
-    res.send(Category);
+    res.json(Category);
 });
 
-app.get('/Category/:Id', async(req, res) => {
-    const Category = await Categories.findById(req.params.Id).populate('Questions');
-    return Category;
+app.get("/Category/:Id", async(req, res) => {
+
+    console.log(req.params.Id);
+    const CategoryQuestion = await Categories.find({ Category: req.params.Id }).populate('Questions');
+    res.json(CategoryQuestion);
+});
+app.get("/Category/:Id/:Question", async(req, res) => {
+    const QuestionAndAnswers = await Question.find({ _id: req.params.Question }).populate('Answers').populate('Answers.Question');
+    res.json(QuestionAndAnswers);
 });
 
 app.get("/", (req, res) => {
-    res.send("home");
+    res.json("home");
 });
 
 app.all("*", (req, res, next) => {
-    next(new ExpressError("What The Fuck Happened  Now??????", 404));
+    next(new ExpressError("What The Now??????", 404));
 });
 
 app.use((err, req, res, next) => {
