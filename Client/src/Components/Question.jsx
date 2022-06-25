@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Question(props) {
   return (
@@ -6,41 +7,84 @@ export default function Question(props) {
       <br /><br /><br />
       <h2 className='heading mt-1'>Ask Questions related to {props.category}</h2>
       <div className='col'>
-        <div className='row-xxl-1 row-xl-1 row-lg-1 row-md-1 row-sm-1 row-1'>
-          <div class="card">
-            <h5 class="card-header">Name of the person</h5>
-            <div class="card-body">
-              <p class="card-text">Question</p>
-              <a href="#" class="btn heading p-2">POST</a>
+        <div className='row-xxl-4 row-xl-4 row-lg-4 row-md-4 row-sm-4 row-4'>
+          <form class="row gy-2 gx-3 align-items-center">
+            <div className="w-100">
+              <input type="text" class="form-control" placeholder="Enter your Name"/>
+              <input type="text" class="form-control" placeholder="Enter your question...."/>
+
+            </div>        
+            <div class="col-auto">
+              <button type="submit" class="btn button-33">POST</button>
             </div>
-          </div>
+            <div class="col-auto">
+              <button type="submit" class="btn button-33">Answer This Question</button>
+            </div>
+          </form>
+          <br/>
         </div>
-        <div className='row-xxl-1 row-xl-1 row-lg-1 row-md-1 row-sm-1 row-1'>
-          <div class="card">
-            <h5 class="card-header">Name of the person</h5>
-            <div class="card-body">
-              <p class="card-text">Question</p>
-              <a href="#" class="btn heading p-2">POST</a>
+        <div className='row-xxl-4 row-xl-4 row-lg-4 row-md-4 row-sm-4 row-4'>
+          <form class="row gy-2 gx-3 align-items-center">
+            <div className="w-100">
+              <input type="text" class="form-control" placeholder="Enter your Name"/>
+              <input type="text" class="form-control" placeholder="Enter your question...."/>
+            </div>        
+            <div class="col-auto">
+              <button type="submit" class="btn button-33">POST</button>
             </div>
-          </div>
+            <div class="col-auto">
+              <button type="submit" class="btn button-33">Answer This Question</button>
+            </div>
+          </form>
+          <br/>
         </div>
-        <div className='row-xxl-1 row-xl-1 row-lg-1 row-md-1 row-sm-1 row-1'>
-          <div class="card">
-            <h5 class="card-header">Name of the person</h5>
-            <div class="card-body">
-              <p class="card-text">Question</p>
-              <a href="#" class="btn heading p-2">POST</a>
+        <div className='row-xxl-4 row-xl-4 row-lg-4 row-md-4 row-sm-4 row-4'>
+          <form class="row gy-2 gx-3 align-items-center">
+            <div className="w-100">
+              <input type="text" class="form-control" placeholder="Enter your Name"/>
+              <input type="text" class="form-control" placeholder="Enter your question...."/>
+
+            </div>        
+            <div class="col-auto">
+              <button type="submit" class="btn button-33">POST</button>
             </div>
-          </div>
+            <div class="col-auto">
+              <button type="submit" class="btn button-33">Answer This Question</button>
+            </div>
+          </form>
+          <br/>
         </div>
-        <div className='row-xxl-1 row-xl-1 row-lg-1 row-md-1 row-sm-1 row-1'>
-          <div class="card">
-            <h5 class="card-header">Name of the person</h5>
-            <div class="card-body">
-              <p class="card-text">Question</p>
-              <a href="#" class="btn heading p-2">POST</a>
+        <div className='row-xxl-4 row-xl-4 row-lg-4 row-md-4 row-sm-4 row-4'>
+          <form class="row gy-2 gx-3 align-items-center">
+            <div className="w-100">
+              <input type="text" class="form-control" placeholder="Enter your Name"/>
+              <input type="text" class="form-control" placeholder="Enter your question...."/>
+
+            </div>        
+            <div class="col-auto">
+              <button type="submit" class="btn button-33">POST</button>
             </div>
-          </div>
+            <div class="col-auto">
+              <button type="submit" class="btn button-33">Answer This Question</button>
+            </div>
+          </form>
+          <br/>
+        </div>
+        <div className='row-xxl-4 row-xl-4 row-lg-4 row-md-4 row-sm-4 row-4'>
+          <form class="row gy-2 gx-3 align-items-center">
+            <div className="w-100">
+              <input type="text" class="form-control" placeholder="Enter your Name"/>
+              <input type="text" class="form-control" placeholder="Enter your question...."/>
+
+            </div>        
+            <div class="col-auto">
+              <button type="submit" class="btn button-33">POST</button>
+            </div>
+            <div class="col-auto">
+              <button type="submit" class="btn button-33">Answer This Question</button>
+            </div>
+          </form>
+          <br/>
         </div>
       </div>
 

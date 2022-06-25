@@ -15,6 +15,14 @@ export default function Signup() {
                     <label for="inputPassword4" class="form-label">Password</label>
                     <input type="password" class="form-control" id="inputPassword4"/>
                 </div>
+                <div class="col-md-6">
+                    <label for="inputFname" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="inputFname"/>
+                </div>
+                <div class="col-md-6">
+                    <label for="inputLname" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="inputLname"/>
+                </div>                
                 <div class="col-12">
                     <label for="inputAddress" class="form-label">Address</label>
                     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"/>
@@ -37,8 +45,8 @@ export default function Signup() {
                 </div>
                 
                 <div class="col-12">
-                    <button type="submit" class="btn heading me-3">Sign Up</button>
-                    <Link to="/Login" class="btn heading me-3">Sign In</Link>
+                    <button type="submit" class="btn button-33 me-3">Sign Up</button>
+                    <Link to="/Login" class="btn button-33 me-3">Sign In</Link>
                 </div>
             </form>
         </>

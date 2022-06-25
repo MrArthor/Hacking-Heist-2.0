@@ -21,8 +21,8 @@ export default function Login() {
                     </div>
                 </div>
                 
-                <button type="submit" class="btn heading me-3">Sign in</button>
-                <Link to="/Signup" class="btn heading me-3">Sign up</Link>
+                <button type="submit" class="btn button-33 me-3">Sign in</button>
+                <Link to="/Signup" class="btn button-33 me-3">Sign up</Link>
             </form>
 
         </>

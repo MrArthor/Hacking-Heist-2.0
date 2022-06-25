@@ -4,19 +4,17 @@ const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const Flash = require("connect-flash");
-// const catchAsync = require("./utils/catchAsync");
-// const ExpressError = require("./utils/ExpressError");
+
 const methodOverride = require("method-override");
-// const Passport = require("passport");
-// const LocalPassport = require("passport-local");
-// const MongoSanitize = require('express-mongo-sanitize');
-
-// const Campground = require("./models/campground");
-// const Reviews = require("./models/Review");
-// const User = require("./models/User");
-// const { campgroundSchema, reviewSchema } = require("./schemas.js");
-
+const Passport = require("passport");
+const LocalPassport = require("passport-local");
+const MongoSanitize = require('express-mongo-sanitize');
 const app = express();
+
+const User = require("./models/user");
+const Question = require("./models/question");
+const Answers = require("./models/answer");
+const Categories = require("./models/categories");
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({
@@ -50,7 +48,7 @@ mongoose.set('useFindAndModify', false);
 app.engine("ejs", ejsMate);
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "View"));
-//app.use(MongoSanitize());
+app.use(MongoSanitize());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname, 'Public')))
