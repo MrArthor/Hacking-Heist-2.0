@@ -38,7 +38,7 @@ export default function Home() {
             </div>
             <br />
             <div className='row'>
-                <div className='col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-'>
+                <div className='col-xxl-4 col-xl-2 col-lg-4 col-md-4 col-sm-6 col-12'>
                     <div class="card">
                         <img src={Vansh} class="card-img-top" alt="..." />
                         <div class="card-body">
@@ -51,7 +51,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className='col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12'>
+                <div className='col-xxl-4 col-xl-2 col-lg-4 col-md-4 col-sm-6 col-12'>
                     <div class="card">
                         <img src={Prateek} class="card-img-top" alt="..." />
                         <div class="card-body">
@@ -63,7 +63,7 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <div className='col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12'>
+                <div className='col-xxl-4 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12'>
                     <div class="card">
                         <img src={Ishita} class="card-img-top" alt="..." />
                         <div class="card-body">
