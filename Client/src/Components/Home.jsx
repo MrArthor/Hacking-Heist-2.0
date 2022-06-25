@@ -9,7 +9,7 @@ import Ishita from "../assets/images/ishita.jpeg"
 export default function Home() {
     return (
         <>
-
+            <br /><br /><br />
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -36,7 +36,7 @@ export default function Home() {
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <br/>
+            <br />
             <div className='row'>
                 <div className='col-xxl-4 col-xl-2 col-lg-4 col-md-4 col-sm-6 col-12'>
                     <div class="card">
@@ -45,9 +45,9 @@ export default function Home() {
                             <h5 class="card-title">Vansh Sachdeva</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn heading w-100">Linkedin</a>
-                            <br/><br/>
+                            <br /><br />
                             <a href="#" class="btn heading w-100">GitHub</a>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -58,7 +58,7 @@ export default function Home() {
                             <h5 class="card-title">Prateek Kanojia</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn heading w-100">Linkedin</a>
-                            <br/><br/>
+                            <br /><br />
                             <a href="#" class="btn heading w-100">GitHub</a>
                         </div>
                     </div>
@@ -70,7 +70,7 @@ export default function Home() {
                             <h5 class="card-title">Ishita Singh</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             <a href="#" class="btn heading w-100">Linkedin</a>
-                            <br/><br/>
+                            <br /><br />
                             <a href="#" class="btn heading w-100">GitHub</a>
                         </div>
                     </div>
