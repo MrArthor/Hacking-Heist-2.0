@@ -1,0 +1,18 @@
+.background{
+    background-color:   #45B8AC;
+}
+.heading{
+    background-color: #45B8AC;
+    color: black;
+    text-align: center;
+    padding: 15px;
+}
+.mybtn{
+    background-color: indigo;
+    color: white;
+    width: 100%;
+}
+.image{
+    height: 15rem;
+    width: 20rem;
+}
