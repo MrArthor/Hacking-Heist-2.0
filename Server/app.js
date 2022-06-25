@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const Flash = require("connect-flash");
+const ExpressError = require("./utils/ExpressError");
 
 const methodOverride = require("method-override");
 const Passport = require("passport");
@@ -11,24 +12,16 @@ const LocalPassport = require("passport-local");
 const MongoSanitize = require('express-mongo-sanitize');
 const app = express();
 
-const User = require("./models/user");
-const Question = require("./models/question");
-const Answers = require("./models/answer");
-const Categories = require("./models/categories");
+const User = require("./models/userModel");
+const Question = require("./models/QuestionModel");
+const Answer = require("./models/AnswerModel");
+const Categories = require("./models/CategoriesModel");
 
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
-// Edpress Routes
-
-// const campgrounds = require('./routes/campground');
-// const ReviewRouter = require('./routes/ReviewRouter');
-// const UserRoutes = require('./routes/UserRoutes');
-// const { date } = require("joi");
-
-
 
 mongoose.connect("mongodb://localhost:27017/", {
     useNewUrlParser: true,
@@ -36,6 +29,7 @@ mongoose.connect("mongodb://localhost:27017/", {
     useUnifiedTopology: true,
     useFindAndModify: false
 });
+
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", () => {
@@ -67,8 +61,8 @@ const SessionConfig = {
 app.use(session(SessionConfig))
 app.use(Flash())
 
-// app.use(Passport.initialize());
-// app.use(Passport.session());
+app.use(Passport.initialize());
+app.use(Passport.session());
 
 // Passport.use(new LocalPassport(User.authenticate()));
 // Passport.serializeUser(User.serializeUser());
@@ -76,16 +70,22 @@ app.use(Flash())
 
 
 app.use((req, res, next) => {
-        res.locals.success = req.flash('success');
-        res.locals.Error = req.flash('error');
-        res.locals.CurrentUser = req.user;
+    res.locals.success = req.flash('success');
+    res.locals.Error = req.flash('error');
+    res.locals.CurrentUser = req.user;
 
-        next();
-    })
-    // app.use('/', UserRoutes);
-    // app.use('/campgrounds', campgrounds)
-    // app.use('/campgrounds/:id/reviews', ReviewRouter)
+    next();
+})
 
+app.get("/Categoires", async(req, res) => {
+    const Category = await Categories.find({});
+    res.send(Category);
+});
+
+app.get('/Category/:Id', async(req, res) => {
+    const Category = await Categories.findById(req.params.Id).populate('Questions');
+    return Category;
+});
 
 app.get("/", (req, res) => {
     res.send("home");

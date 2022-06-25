@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const Categories = require("./Categories");
-const Answers = require("./Answer");
+const Categories = require("./CategoriesModel");
+const Answers = require("./AnswerModel");
 
 const QuestionSchema = new Schema({
     QuestionName: String,
