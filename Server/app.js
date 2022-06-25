@@ -5,6 +5,8 @@ const ejsMate = require("ejs-mate");
 const session = require("express-session");
 const Flash = require("connect-flash");
 const ExpressError = require("./utils/ExpressError");
+const cors = require('cors')
+
 
 const methodOverride = require("method-override");
 const Passport = require("passport");
@@ -22,6 +24,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
+app.use(cors())
 
 mongoose.connect("mongodb://localhost:27017/Ansed", {
     useNewUrlParser: true,

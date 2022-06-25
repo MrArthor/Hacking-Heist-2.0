@@ -1,6 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import axios from 'axios';
 
+const api = axios.create({
+  baseURL: 'http://localhost:9483/',
+});
+let Data=[];
+const GetCategories = async() => {
+await  api.get('/Category/Laptops')
+    .then((response) => {
+      let data = response.data;
+      Data.push(data);
+      console.log('Data has been received!!');
+    })
+    .catch(() => {
+      alert('Error retrieving data!!!');
+    });
+}
+GetCategories();
 export default function Question(props) {
   return (
     <>
