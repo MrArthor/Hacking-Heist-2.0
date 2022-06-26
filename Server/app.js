@@ -94,7 +94,7 @@ app.get("/Category/:Id/:Question", async(req, res) => {
     const QuestionAndAnswers = await Question.find({ _id: req.params.Question }).populate('Answers').populate('Answers.Question');
     res.json(QuestionAndAnswers);
 });
-app.post("/Category/:Id/:Question", async(req, res) => {
+app.post("/PostQuestion", async(req, res) => {
     const Ques = new Question(res.body.Question);
     Question.save();
     const Cat = find({ _id: req.params.Id });

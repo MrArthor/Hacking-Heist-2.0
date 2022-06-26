@@ -23,7 +23,7 @@ const seedDB = async() => {
     await Categories.deleteMany({});
     await Question.deleteMany({});
     await Answers.deleteMany({});
-    for (let i = 0; i < 1; i++) {
+    for (let i = 0; i < 10; i++) {
         const Cat = new Categories({
             Category: 'Laptops',
         })

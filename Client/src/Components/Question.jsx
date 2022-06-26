@@ -6,17 +6,17 @@ const api = axios.create({
 });
 let Data=[];
 const GetCategories = async() => {
-await  api.get('/Category/Laptops')
+await  api.post('/Category/Laptop')
     .then((response) => {
       let data = response.data;
       Data.push(data);
       console.log('Data has been received!!');
     })
     .catch(() => {
-      alert('Error retrieving data!!!');
+      //alert('Error retrieving data!!!');
     });
 }
-GetCategories();
+// GetCategories();
 export default function Question(props) {
   return (
     <>
@@ -24,80 +24,83 @@ export default function Question(props) {
       <h2 className='heading mt-1'>Ask Questions related to {props.category}</h2>
       <div className='col'>
         <div className='row-xxl-4 row-xl-4 row-lg-4 row-md-4 row-sm-4 row-4'>
-          <form class="row gy-2 gx-3 align-items-center">
+          <form className="row gy-2 gx-3 align-items-center"  action='/PostQuestion' method='Post'>
             <div className="w-100">
-              <input type="text" class="form-control" placeholder="Enter your Name"/>
-              <input type="text" class="form-control" placeholder="Enter your question...."/>
+              <input type="text" className="form-control" placeholder="Enter your Name"/>
+              <input type="text" className="form-control" placeholder="Enter your question...."/>
 
             </div>        
-            <div class="col-auto">
-              <button type="submit" class="btn button-33">POST</button>
+            <div className="col-auto">
+              <button type="submit" className="btn button-33" onClick={GetCategories()}>POST</button>
             </div>
-            <div class="col-auto">
-              <button type="submit" class="btn button-33">Answer This Question</button>
+            <div className="col-auto">
+              <button type="submit" className="btn button-33">Answer This Question</button>
+            </div>
+          </form>
+          <br/>
+        </div>
+
+        <div className='row-xxl-4 row-xl-4 row-lg-4 row-md-4 row-sm-4 row-4'>
+          <form className="row gy-2 gx-3 align-items-center"  action='/PostQuestion' method='Post'>
+            <div className="w-100">
+              <input type="text" className="form-control" placeholder="Enter your Name"/>
+              <input type="text" className="form-control" placeholder="Enter your question...."/>
+            </div>        
+            <div className="col-auto">
+              <button type="submit" className="btn button-33"  onClick={GetCategories()}>POST</button>
+            </div>
+            <div className="col-auto">
+              <button type="submit" className="btn button-33">Answer This Question</button>
+            </div>
+          </form>
+          <br/>
+        </div>
+
+        <div className='row-xxl-4 row-xl-4 row-lg-4 row-md-4 row-sm-4 row-4'>
+          <form className="row gy-2 gx-3 align-items-center"  action='/PostQuestion' method='Post'>
+            <div className="w-100">
+              <input type="text" className="form-control" placeholder="Enter your Name"/>
+              <input type="text" className="form-control" placeholder="Enter your question...."/>
+
+            </div>        
+            <div className="col-auto">
+              <button type="submit" className="btn button-33"  onClick={GetCategories()}>POST</button>
+            </div>
+            <div className="col-auto">
+              <button type="submit" className="btn button-33">Answer This Question</button>
+            </div>
+          </form>
+          <br/>
+        </div>
+
+        <div className='row-xxl-4 row-xl-4 row-lg-4 row-md-4 row-sm-4 row-4'>
+          <form className="row gy-2 gx-3 align-items-center"  action='/PostQuestion' method='Post'>
+            <div className="w-100">
+              <input type="text" className="form-control" placeholder="Enter your Name"/>
+              <input type="text" className="form-control" placeholder="Enter your question...."/>
+
+            </div>        
+            <div className="col-auto">
+              <button type="submit" className="btn button-33"  onClick={GetCategories()}>POST</button>
+            </div>
+            <div className="col-auto">
+              <button type="submit" className="btn button-33">Answer This Question</button>
             </div>
           </form>
           <br/>
         </div>
         <div className='row-xxl-4 row-xl-4 row-lg-4 row-md-4 row-sm-4 row-4'>
-          <form class="row gy-2 gx-3 align-items-center">
+          <form className="row gy-2 gx-3 align-items-center"  action='/PostQuestion' method='Post'>
             <div className="w-100">
-              <input type="text" class="form-control" placeholder="Enter your Name"/>
-              <input type="text" class="form-control" placeholder="Enter your question...."/>
-            </div>        
-            <div class="col-auto">
-              <button type="submit" class="btn button-33">POST</button>
-            </div>
-            <div class="col-auto">
-              <button type="submit" class="btn button-33">Answer This Question</button>
-            </div>
-          </form>
-          <br/>
-        </div>
-        <div className='row-xxl-4 row-xl-4 row-lg-4 row-md-4 row-sm-4 row-4'>
-          <form class="row gy-2 gx-3 align-items-center">
-            <div className="w-100">
-              <input type="text" class="form-control" placeholder="Enter your Name"/>
-              <input type="text" class="form-control" placeholder="Enter your question...."/>
+              <input type="text" className="form-control" placeholder="Enter your Name"/>
+              <input type="text" className="form-control" placeholder="Enter your question...."/>
 
             </div>        
-            <div class="col-auto">
-              <button type="submit" class="btn button-33">POST</button>
+            <div className="col-auto">
+              <button type="submit" className="btn button-33"  onClick={GetCategories()}>POST</button>
             </div>
-            <div class="col-auto">
-              <button type="submit" class="btn button-33">Answer This Question</button>
-            </div>
-          </form>
-          <br/>
-        </div>
-        <div className='row-xxl-4 row-xl-4 row-lg-4 row-md-4 row-sm-4 row-4'>
-          <form class="row gy-2 gx-3 align-items-center">
-            <div className="w-100">
-              <input type="text" class="form-control" placeholder="Enter your Name"/>
-              <input type="text" class="form-control" placeholder="Enter your question...."/>
-
-            </div>        
-            <div class="col-auto">
-              <button type="submit" class="btn button-33">POST</button>
-            </div>
-            <div class="col-auto">
-              <button type="submit" class="btn button-33">Answer This Question</button>
-            </div>
-          </form>
-          <br/>
-        </div>
-        <div className='row-xxl-4 row-xl-4 row-lg-4 row-md-4 row-sm-4 row-4'>
-          <form class="row gy-2 gx-3 align-items-center">
-            <div className="w-100">
-              <input type="text" class="form-control" placeholder="Enter your Name"/>
-              <input type="text" class="form-control" placeholder="Enter your question...."/>
-
-            </div>        
-            <div class="col-auto">
-              <button type="submit" class="btn button-33">POST</button>
-            </div>
-            <div class="col-auto">
-              <button type="submit" class="btn button-33">Answer This Question</button>
+            <div className="col-auto">
+              <button type="submit" className="btn button-33">Answer This Question</button>
             </div>
           </form>
           <br/>
