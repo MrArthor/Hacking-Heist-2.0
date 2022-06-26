@@ -94,7 +94,24 @@ app.get("/Category/:Id/:Question", async(req, res) => {
     const QuestionAndAnswers = await Question.find({ _id: req.params.Question }).populate('Answers').populate('Answers.Question');
     res.json(QuestionAndAnswers);
 });
-
+app.post("/Category/:Id/:Question", async(req, res) => {
+    const Ques = new Question(res.body.Question);
+    Question.save();
+    const Cat = find({ _id: req.params.Id });
+    Cat.Questions.push(Ques);
+    Cat.save();
+    res.json(Cat);
+});
+app.post("/Category/:Id/:Question/:Answer", async(req, res) => {
+    const Ans = new Answers(res.body.Answer);
+    Answers.save();
+    const Ques = find({
+        _id: req.params.Question
+    });
+    Ques.Answers.push(Ans);
+    Ques.save();
+    res.json(Ques);
+});
 app.get("/", (req, res) => {
     res.json("home");
 });
