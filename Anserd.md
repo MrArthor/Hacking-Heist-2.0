@@ -27,7 +27,7 @@ Anserd uses a number of open source projects to work properly:
 - [Numerous NodeJs Packages] - for implementing various features 
 - [jQuery] - duh
 
-And of course Anserd itself is open source with a [public repository][dill]
+And of course Dillinger itself is open source with a [public repository][dill]
  on GitHub.
 
 ## Installation

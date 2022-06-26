@@ -38,40 +38,40 @@ export default function Home() {
             </div>
             <br />
             <div className='row'>
-                <div className='col-xxl-4 col-xl-2 col-lg-4 col-md-4 col-sm-6 col-12'>
+                <div className='col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12'>
                     <div class="card">
                         <img src={Vansh} class="card-img-top" alt="..." />
                         <div class="card-body">
                             <h5 class="card-title">Vansh Sachdeva</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn heading w-100">Linkedin</a>
+                            <a href="https://www.linkedin.com/in/mrarthor/" class="btn heading w-100">Linkedin</a>
                             <br /><br />
-                            <a href="#" class="btn heading w-100">GitHub</a>
+                            <a href="https://github.com/MrArthor" class="btn heading w-100">GitHub</a>
 
                         </div>
                     </div>
                 </div>
-                <div className='col-xxl-4 col-xl-2 col-lg-4 col-md-4 col-sm-6 col-12'>
+                <div className='col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12'>
                     <div class="card">
                         <img src={Prateek} class="card-img-top" alt="..." />
                         <div class="card-body">
                             <h5 class="card-title">Prateek Kanojia</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn heading w-100">Linkedin</a>
+                            <a href="https://www.linkedin.com/in/prateek-kanojia-479146205/" class="btn heading w-100">Linkedin</a>
                             <br /><br />
-                            <a href="#" class="btn heading w-100">GitHub</a>
+                            <a href="https://github.com/Prateek844866" class="btn heading w-100">GitHub</a>
                         </div>
                     </div>
                 </div>
-                <div className='col-xxl-4 col-xl-2 col-lg-3 col-md-4 col-sm-6 col-12'>
+                <div className='col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-6 col-12'>
                     <div class="card">
                         <img src={Ishita} class="card-img-top" alt="..." />
                         <div class="card-body">
                             <h5 class="card-title">Ishita Singh</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn heading w-100">Linkedin</a>
+                            <a href="https://www.linkedin.com/in/ishita-singh1808/" class="btn heading w-100">Linkedin</a>
                             <br /><br />
-                            <a href="#" class="btn heading w-100">GitHub</a>
+                            <a href="https://github.com/Ishita-Singh1808" class="btn heading w-100">GitHub</a>
                         </div>
                     </div>
                 </div>
